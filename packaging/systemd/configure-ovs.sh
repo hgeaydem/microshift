@@ -140,7 +140,7 @@ convert_to_bridge() {
     echo "MTU found for iface: ${iface}: ${iface_mtu}"
   fi
   # store old conn for later
-  old_conn=$(nmcli --fields UUID,DEVICE conn show --active | awk "/\s${iface}\s*\$/ {print \$1}")
+  old_conn=$(nmcli --fields UUID,DEVICE conn show --active | awk "/${iface}/ {print \$1}")
   # create bridge
   if ! nmcli connection show "$bridge_name" &> /dev/null; then
     ovs-vsctl --timeout=30 --if-exists del-br "$bridge_name"
@@ -618,10 +618,6 @@ trap "handle_exit" EXIT
 if [ ! -f /etc/cno/mtu-migration/config ]; then
   echo "Cleaning up left over mtu migration configuration"
   rm -rf /etc/cno/mtu-migration
-fi
-if ! rpm -qa | grep -q openvswitch; then
-  echo "Warning: Openvswitch package is not installed!"
-  exit 1
 fi
 # print initial state
 print_state
