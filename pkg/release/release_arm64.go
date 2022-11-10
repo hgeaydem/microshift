@@ -29,5 +29,11 @@ func init() {
 		"ovn_kubernetes_microshift": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f87a24869bcb305dd726cc1f45115415894a9b0ebdc0c5902a038abe051765d6",
 		"pod":                       "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a8ef2351440927bfc107456a0eb1a2c0a2bc5de49765be7dff0fdfbde60d030f",
 		"service_ca_operator":       "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:10be1a369305d1453fecf100a3489bdf2000d1f3c09c020999e04b2ec7e43698",
+		"odf_topolvm":               "quay.io/rhceph-dev/odf4-odf-topolvm-rhel8@sha256:2855918d1849c99a835eb03c53ce07170c238111fd15d2fe50cd45611fcd1ceb",
+                "ose_csi_ext_provisioner":   "quay.io/rhceph-dev/openshift-ose-csi-external-provisioner@sha256:c3b2417f8fcb8883275f0e613037f83133ccc3f91311a30688e4be520544ea4a",
+                "ose_csi_ext_resizer":       "quay.io/rhceph-dev/openshift-ose-csi-external-resizer@sha256:213f43d61b3a214a4a433c7132537be082a108d55005f2ba0777c2ea97489799",
+                "topolvm-csi-snapshotter":   "quay.io/rhceph-dev/openshift-ose-csi-external-snapshotter@sha256:734c095670d21b77f18c84670d6c9a7742be1d9151dca0da20f41858ede65ed8",
+                "ose_csi_livenessprobe":     "quay.io/rhceph-dev/openshift-ose-csi-livenessprobe@sha256:b05559aa038708ab448cfdfed2ca880726aed6cc30371fea4d6a42c972c0c728",
+                "ose_csi_node_registrar":    "quay.io/rhceph-dev/openshift-ose-csi-node-driver-registrar@sha256:fb0f5e531847db94dcadc61446b9a892f6f92ddf282e192abf2fdef6c6af78f2",
 	}
 }

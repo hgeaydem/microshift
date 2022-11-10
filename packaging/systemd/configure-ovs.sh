@@ -619,10 +619,10 @@ if [ ! -f /etc/cno/mtu-migration/config ]; then
   echo "Cleaning up left over mtu migration configuration"
   rm -rf /etc/cno/mtu-migration
 fi
-if ! rpm -qa | grep -q openvswitch; then
-  echo "Warning: Openvswitch package is not installed!"
-  exit 1
-fi
+#if ! rpm -qa | grep -q openvswitch; then
+#  echo "Warning: Openvswitch package is not installed!"
+#  exit 1
+#fi
 # print initial state
 print_state
 if [ "$1" == "OVNKubernetes" ]; then
